@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "quest-liability"
+    }
+  },
+  "defaultProject": "quest-liability",
+  "cli": {
+    "analytics": "5c2ae52d-52db-4bf8-ba1c-b5545b8e1205"
+  }
 }

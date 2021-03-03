@@ -1,0 +1,41 @@
+<img src="src/assets/img/logo.jpg">
+<div class="student-list container-sm content_box">
+    <div class="btn-row text-center">
+        <button class="btn btn-primary m-2" (click)="showAllStudents()">Show All Students</button>
+        <button class="btn btn-secondary m-2" (click)="showFlaggedStudents()">Show Flagged Students</button>
+        <button class="btn btn-secondary m-2" (click)="showUnflaggedStudents()">Show Unflagged Students</button>
+    </div>
+    <select class="form-select form-select-lg border border-dark" aria-label=".form-select-sm example">
+        <option selected>Show Students by School...</option>
+        <option value="1">Westview Middle School</option>
+        <option value="2"> Sangaree Middle School</option>
+        <option value="3">Moultrie Middle School</option>
+        <option value="4">Northwoods Middle School</option>
+        <option value="5">Morningside Middle School</option>
+        <option value="6">Summerville High School</option>
+        <option value="7">Wando High School</option>
+        <option value="8">Burke High School</option>
+        <option value="9">Stratford High School</option>
+        <option value="10">Goose Creek High School</option>
+    </select>
+    <table class="table table-striped table-hover m-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">School Name </th>
+                <th scope="col">Form Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr scope="row" class="table-row" *ngFor="let s of students; let i = index">
+                <td>{{i}}</td>
+                <td>{{s.lastName}}</td>
+                <td>{{s.firstName}}</td>
+                <td>{{s.schoolName}}</td>
+                <td>{{s.submitted}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
